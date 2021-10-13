@@ -1,1 +1,262 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Mysteries of Inrinth</title>
+    <link rel="shortcut icon" type="image/png" href="psufavicon.png"/>
+</head>
+<body>
+    <div class="sidebar">
+        <ul id="nav">
+            <li>
+                <span>
+                    <a id="home" class="accordion-bar-item accordion-button button-clicked" onclick="home()">Home</a>
+                </span>
+            </li>
+
+            <li>
+                <span>
+                    <button id="mathButton" class="accordion-button accordion-block accordion-left-align" onclick="mathAccordian()">
+                        Math
+                        </button>
+                        <div id="mathAccordian" class="accordion-hide accordion-card">
+                            <ul>
+                                <li>
+                                    <a id="math230" class="accordion-bar-item accordion-button" onclick="math230()">MATH 230</a>
+
+                                </li>
+                            </ul>
+                        </div>
+                </span>
+            </li>
+
+            <li>
+                <span>
+                    <button id="cmpscButton" class="accordion-button accordion-block accordion-left-align" onclick="cmpscAccordian()">
+                        Computer Science
+                        </button>
+                        <div id="cmpscAccordian" class="accordion-hide accordion-card">
+                            <ul>
+                                <li>
+                                    <a id="cmpsc221" class="accordion-bar-item accordion-button" onclick="cmpsc221()">CMPSC 221</a>
+
+                                </li>
+                            </ul>
+                        </div>
+                </span>
+            </li>
+
+            <li>
+                <span>
+                    <button id="cmpenButton" class="accordion-button accordion-block accordion-left-align" onclick="cmpenAccordian()">
+                        Computer Engineering
+                        </button>
+                        <div id="cmpenAccordian" class="accordion-hide accordion-card">
+                            <ul>
+                                <li>
+                                    <a id="cmpen270" class="accordion-bar-item accordion-button" onclick="cmpen270()">CMPEN 270</a>
+
+                                </li>
+                            </ul>
+                        </div>
+                </span>
+            </li>
+
+            <li>
+                <span>
+                    <button id="elecButton" class="accordion-button accordion-block accordion-left-align" onclick="elecAccordian()">
+                        Electives
+                        </button>
+                        <div id="elecAccordian" class="accordion-hide accordion-card">
+                            <ul>
+                                <li>
+                                    <a id="cas100a" class="accordion-bar-item accordion-button" onclick="cas100a()">CAS 100A</a>
+
+                                </li>
+                                <li>
+                                    <a id="hpa57a" class="accordion-bar-item accordion-button" onclick="hpa57a()">HPA 57A</a>
+                                </li>
+                            </ul>
+                        </div>
+                </span>
+            </li>
+            <li>
+                <span>
+                    <a id="theme" class="accordion-bar-item accordion-button" onclick="theme()">Theme: Dark</a>
+                </span>
+            </li>
+        </ul>
+      </div>
+      
+      <!-- Page content -->
+      <div id="content">
+          <p>home stuff</p>
+      </div>
+
+      <script>
+            var currentAccShow = document.getElementById("mathAccordian");
+            var currentAccClicked = document.getElementById("mathButton");
+            function mathAccordian() {
+                var x = document.getElementById("mathAccordian");
+                if (x.className.indexOf("accordion-show") == -1) {
+                    currentAccShow.className = currentAccShow.className.replace(" accordion-show", "");
+                    currentAccClicked.className = currentAccClicked.className.replace(" accordion-clicked", "");
+
+                    currentAccShow = document.getElementById("mathAccordian");
+                    currentAccClicked = document.getElementById("mathButton");
+
+                    currentAccShow.className += " accordion-show";
+                    currentAccClicked.className += " accordion-clicked";
+                } else { 
+                    currentAccShow.className = currentAccShow.className.replace(" accordion-show", "");
+                    currentAccClicked.className = currentAccClicked.className.replace(" accordion-clicked", "");
+                }
+            }
+
+            function cmpscAccordian() {
+                var x = document.getElementById("cmpscAccordian");
+                if (x.className.indexOf("accordion-show") == -1) {
+                    currentAccShow.className = currentAccShow.className.replace(" accordion-show", "");
+                    currentAccClicked.className = currentAccClicked.className.replace(" accordion-clicked", "");
+
+                    currentAccShow = document.getElementById("cmpscAccordian");
+                    currentAccClicked = document.getElementById("cmpscButton");
+                    
+                    currentAccShow.className += " accordion-show";
+                    currentAccClicked.className += " accordion-clicked";
+                } else { 
+                    currentAccShow.className = currentAccShow.className.replace(" accordion-show", "");
+                    currentAccClicked.className = currentAccClicked.className.replace(" accordion-clicked", "");
+                }
+            }
+
+            function cmpenAccordian() {
+                var x = document.getElementById("cmpenAccordian");
+                if (x.className.indexOf("accordion-show") == -1) {
+                    currentAccShow.className = currentAccShow.className.replace(" accordion-show", "");
+                    currentAccClicked.className = currentAccClicked.className.replace(" accordion-clicked", "");
+
+                    currentAccShow = document.getElementById("cmpenAccordian");
+                    currentAccClicked = document.getElementById("cmpenButton");
+                    
+                    currentAccShow.className += " accordion-show";
+                    currentAccClicked.className += " accordion-clicked";
+                } else { 
+                    currentAccShow.className = currentAccShow.className.replace(" accordion-show", "");
+                    currentAccClicked.className = currentAccClicked.className.replace(" accordion-clicked", "");
+                }
+            }
+
+            function elecAccordian() {
+                var x = document.getElementById("elecAccordian");
+                if (x.className.indexOf("accordion-show") == -1) {
+                    currentAccShow.className = currentAccShow.className.replace(" accordion-show", "");
+                    currentAccClicked.className = currentAccClicked.className.replace(" accordion-clicked", "");
+
+                    currentAccShow = document.getElementById("elecAccordian");
+                    currentAccClicked = document.getElementById("elecButton");
+                    
+                    currentAccShow.className += " accordion-show";
+                    currentAccClicked.className += " accordion-clicked";
+                } else { 
+                    currentAccShow.className = currentAccShow.className.replace(" accordion-show", "");
+                    currentAccClicked.className = currentAccClicked.className.replace(" accordion-clicked", "");
+                }
+            }
+
+
+
+
+
+
+
+
+            var currentClicked = document.getElementById("home");
+            function math230() {
+                var x = document.getElementById("math230");
+                if (x.className.indexOf("button-clicked") == -1) {
+                    currentClicked.className -= " button-clicked";
+                    x.className += " button-clicked";
+                    currentClicked = x;
+
+                    document.getElementById("content").innerHTML = "<p>math stuff</p>";
+                }
+            }
+
+            function cmpsc221() {
+                var x = document.getElementById("cmpsc221");
+                if (x.className.indexOf("button-clicked") == -1) {
+                    currentClicked.className -= " button-clicked";
+                    x.className += " button-clicked";
+                    currentClicked = x;
+
+                    document.getElementById("content").innerHTML = "<p>compsci stuff</p>";
+                }
+            }
+
+            function cmpen270() {
+                var x = document.getElementById("cmpen270");
+                if (x.className.indexOf("button-clicked") == -1) {
+                    currentClicked.className -= " button-clicked";
+                    x.className += " button-clicked";
+                    currentClicked = x;
+
+                    document.getElementById("content").innerHTML = "<p>computer engineering stuff</p>";
+                }
+            }
+
+            function cas100a() {
+                var x = document.getElementById("cas100a");
+                if (x.className.indexOf("button-clicked") == -1) {
+                    currentClicked.className -= " button-clicked";
+                    x.className += " button-clicked";
+                    currentClicked = x;
+
+                    document.getElementById("content").innerHTML = "<p>public speaking stuff</p>";
+                }
+            }
+
+            function hpa57a() {
+                var x = document.getElementById("hpa57a");
+                if (x.className.indexOf("button-clicked") == -1) {
+                    currentClicked.className -= " button-clicked";
+                    x.className += " button-clicked";
+                    currentClicked = x;
+
+                    document.getElementById("content").innerHTML = "<p>health stuff</p>";
+                }
+            }
+
+            function home() {
+                var x = document.getElementById("home");
+                if (x.className.indexOf("button-clicked") == -1) {
+                    currentClicked.className -= " button-clicked";
+                    x.className += " button-clicked";
+                    currentClicked = x;
+
+                    document.getElementById("content").innerHTML = "<p>home stuff</P";
+                }
+            }
+
+            function theme() {
+                var x = document.getElementById("theme");
+                if (x.innerHTML === "Theme: Dark") {
+                    x.innerHTML = "Theme: Light";
+                    var els = document.getElementsByTagName("*");
+                    for(var i = 0, all = els.length; i < all; i++){   
+                        els[i].classList.add('theme-light');
+                    }
+                } else { 
+                    x.innerHTML = "Theme: Dark";
+                    var els = document.getElementsByTagName("*");
+                    for(var i = 0, all = els.length; i < all; i++){   
+                        els[i].classList.remove('theme-light');
+                    }
+                }
+            }
+      </script>
+</body>
+</html>
