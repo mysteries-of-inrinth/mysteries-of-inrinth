@@ -8,255 +8,123 @@
     <title>Mysteries of Inrinth</title>
     <link rel="shortcut icon" type="image/png" href="psufavicon.png"/>
 </head>
-<body>
-    <div class="sidebar">
-        <ul id="nav">
-            <li>
-                <span>
-                    <a id="home" class="accordion-bar-item accordion-button button-clicked" onclick="home()">Home</a>
-                </span>
-            </li>
-
-            <li>
-                <span>
-                    <button id="mathButton" class="accordion-button accordion-block accordion-left-align" onclick="mathAccordian()">
-                        Math
-                        </button>
-                        <div id="mathAccordian" class="accordion-hide accordion-card">
-                            <ul>
-                                <li>
-                                    <a id="math230" class="accordion-bar-item accordion-button" onclick="math230()">MATH 230</a>
-
-                                </li>
-                            </ul>
-                        </div>
-                </span>
-            </li>
-
-            <li>
-                <span>
-                    <button id="cmpscButton" class="accordion-button accordion-block accordion-left-align" onclick="cmpscAccordian()">
-                        Computer Science
-                        </button>
-                        <div id="cmpscAccordian" class="accordion-hide accordion-card">
-                            <ul>
-                                <li>
-                                    <a id="cmpsc221" class="accordion-bar-item accordion-button" onclick="cmpsc221()">CMPSC 221</a>
-
-                                </li>
-                            </ul>
-                        </div>
-                </span>
-            </li>
-
-            <li>
-                <span>
-                    <button id="cmpenButton" class="accordion-button accordion-block accordion-left-align" onclick="cmpenAccordian()">
-                        Computer Engineering
-                        </button>
-                        <div id="cmpenAccordian" class="accordion-hide accordion-card">
-                            <ul>
-                                <li>
-                                    <a id="cmpen270" class="accordion-bar-item accordion-button" onclick="cmpen270()">CMPEN 270</a>
-
-                                </li>
-                            </ul>
-                        </div>
-                </span>
-            </li>
-
-            <li>
-                <span>
-                    <button id="elecButton" class="accordion-button accordion-block accordion-left-align" onclick="elecAccordian()">
-                        Electives
-                        </button>
-                        <div id="elecAccordian" class="accordion-hide accordion-card">
-                            <ul>
-                                <li>
-                                    <a id="cas100a" class="accordion-bar-item accordion-button" onclick="cas100a()">CAS 100A</a>
-
-                                </li>
-                                <li>
-                                    <a id="hpa57a" class="accordion-bar-item accordion-button" onclick="hpa57a()">HPA 57A</a>
-                                </li>
-                            </ul>
-                        </div>
-                </span>
-            </li>
-            <li>
-                <span>
-                    <a id="theme" class="accordion-bar-item accordion-button" onclick="theme()">Theme: Dark</a>
-                </span>
-            </li>
-        </ul>
-      </div>
-      
-      <!-- Page content -->
-      <div id="content">
-          <p>home stuff</p>
-      </div>
-
-      <script>
-            var currentAccShow = document.getElementById("mathAccordian");
-            var currentAccClicked = document.getElementById("mathButton");
-            function mathAccordian() {
-                var x = document.getElementById("mathAccordian");
-                if (x.className.indexOf("accordion-show") == -1) {
-                    currentAccShow.className = currentAccShow.className.replace(" accordion-show", "");
-                    currentAccClicked.className = currentAccClicked.className.replace(" accordion-clicked", "");
-
-                    currentAccShow = document.getElementById("mathAccordian");
-                    currentAccClicked = document.getElementById("mathButton");
-
-                    currentAccShow.className += " accordion-show";
-                    currentAccClicked.className += " accordion-clicked";
-                } else { 
-                    currentAccShow.className = currentAccShow.className.replace(" accordion-show", "");
-                    currentAccClicked.className = currentAccClicked.className.replace(" accordion-clicked", "");
-                }
-            }
-
-            function cmpscAccordian() {
-                var x = document.getElementById("cmpscAccordian");
-                if (x.className.indexOf("accordion-show") == -1) {
-                    currentAccShow.className = currentAccShow.className.replace(" accordion-show", "");
-                    currentAccClicked.className = currentAccClicked.className.replace(" accordion-clicked", "");
-
-                    currentAccShow = document.getElementById("cmpscAccordian");
-                    currentAccClicked = document.getElementById("cmpscButton");
-                    
-                    currentAccShow.className += " accordion-show";
-                    currentAccClicked.className += " accordion-clicked";
-                } else { 
-                    currentAccShow.className = currentAccShow.className.replace(" accordion-show", "");
-                    currentAccClicked.className = currentAccClicked.className.replace(" accordion-clicked", "");
-                }
-            }
-
-            function cmpenAccordian() {
-                var x = document.getElementById("cmpenAccordian");
-                if (x.className.indexOf("accordion-show") == -1) {
-                    currentAccShow.className = currentAccShow.className.replace(" accordion-show", "");
-                    currentAccClicked.className = currentAccClicked.className.replace(" accordion-clicked", "");
-
-                    currentAccShow = document.getElementById("cmpenAccordian");
-                    currentAccClicked = document.getElementById("cmpenButton");
-                    
-                    currentAccShow.className += " accordion-show";
-                    currentAccClicked.className += " accordion-clicked";
-                } else { 
-                    currentAccShow.className = currentAccShow.className.replace(" accordion-show", "");
-                    currentAccClicked.className = currentAccClicked.className.replace(" accordion-clicked", "");
-                }
-            }
-
-            function elecAccordian() {
-                var x = document.getElementById("elecAccordian");
-                if (x.className.indexOf("accordion-show") == -1) {
-                    currentAccShow.className = currentAccShow.className.replace(" accordion-show", "");
-                    currentAccClicked.className = currentAccClicked.className.replace(" accordion-clicked", "");
-
-                    currentAccShow = document.getElementById("elecAccordian");
-                    currentAccClicked = document.getElementById("elecButton");
-                    
-                    currentAccShow.className += " accordion-show";
-                    currentAccClicked.className += " accordion-clicked";
-                } else { 
-                    currentAccShow.className = currentAccShow.className.replace(" accordion-show", "");
-                    currentAccClicked.className = currentAccClicked.className.replace(" accordion-clicked", "");
-                }
-            }
-
-
-
-
-
-
-
-
-            var currentClicked = document.getElementById("home");
-            function math230() {
-                var x = document.getElementById("math230");
-                if (x.className.indexOf("button-clicked") == -1) {
-                    currentClicked.className -= " button-clicked";
-                    x.className += " button-clicked";
-                    currentClicked = x;
-
-                    document.getElementById("content").innerHTML = "<p>math stuff</p>";
-                }
-            }
-
-            function cmpsc221() {
-                var x = document.getElementById("cmpsc221");
-                if (x.className.indexOf("button-clicked") == -1) {
-                    currentClicked.className -= " button-clicked";
-                    x.className += " button-clicked";
-                    currentClicked = x;
-
-                    document.getElementById("content").innerHTML = "<p>compsci stuff</p>";
-                }
-            }
-
-            function cmpen270() {
-                var x = document.getElementById("cmpen270");
-                if (x.className.indexOf("button-clicked") == -1) {
-                    currentClicked.className -= " button-clicked";
-                    x.className += " button-clicked";
-                    currentClicked = x;
-
-                    document.getElementById("content").innerHTML = "<p>computer engineering stuff</p>";
-                }
-            }
-
-            function cas100a() {
-                var x = document.getElementById("cas100a");
-                if (x.className.indexOf("button-clicked") == -1) {
-                    currentClicked.className -= " button-clicked";
-                    x.className += " button-clicked";
-                    currentClicked = x;
-
-                    document.getElementById("content").innerHTML = "<p>public speaking stuff</p>";
-                }
-            }
-
-            function hpa57a() {
-                var x = document.getElementById("hpa57a");
-                if (x.className.indexOf("button-clicked") == -1) {
-                    currentClicked.className -= " button-clicked";
-                    x.className += " button-clicked";
-                    currentClicked = x;
-
-                    document.getElementById("content").innerHTML = "<p>health stuff</p>";
-                }
-            }
-
+    <body>
+        <nav>
+            <ul class="squircles">
+                <form>
+                    <li input type= "checkbox" class="squircle" onclick="home()">
+                        <div class="popper-boi">
+                            <h4 class="popper-text"> Home</h4>
+                        </div>                  
+                    </li>
+                </form>
+                
+                <li class="divider"></li>
+                <form>
+                    <li input type= "checkbox" class="squircle" onclick="alert('click event occurred')">
+                        <div class="popper-boi">
+                            <h4 class="popper-text"> Home</h4>
+                        </div>                  
+                    </li>
+                </form>
+                <form>
+                    <li input type= "checkbox" class="squircle" onclick="alert('click event occurred')">
+                        <div class="popper-boi">
+                            <h4 class="popper-text"> Home</h4>
+                        </div>                  
+                    </li>
+                </form>
+                <form>
+                    <li input type= "checkbox" class="squircle" onclick="alert('click event occurred')">
+                        <div class="popper-boi">
+                            <h4 class="popper-text"> Home</h4>
+                        </div>                  
+                    </li>
+                </form>
+                <form>
+                    <li input type= "checkbox" class="squircle" onclick="alert('click event occurred')">
+                        <div class="popper-boi">
+                            <h4 class="popper-text"> Home</h4>
+                        </div>                  
+                    </li>
+                </form>
+                <form>
+                    <li input type= "checkbox" class="squircle" onclick="alert('click event occurred')">
+                        <div class="popper-boi">
+                            <h4 class="popper-text"> Home</h4>
+                        </div>                  
+                    </li>
+                </form>
+            </ul>
+        </nav>
+        <div id="toc">
+        </div>
+        <div id="content">
+            <h1>Welcome to Mysteries of Inie e e e e e e e e e e ee e e e e e e e e e e e e e e erinth!</h1>
+            MoI is a new 18+ DnD Discord server aiming to bring a breath of fresh air to the conventional DnD community through some rather unique features. We have everything from fancy embeds to this website you're on right now!<br><br>
+            For the sake of making things a bit easier on members, this website has been created to store all the information you could possibly want in regards to character creation. Everything ranging from the server's homebrew to its lore can be found here.
+            <br><br>
+            Make sure to look through everything before submitting a character!
+            <br>
+            <p id="sign">Yours truly, James_</p>
+            
+            
+        </div>
+        <script>
             function home() {
-                var x = document.getElementById("home");
-                if (x.className.indexOf("button-clicked") == -1) {
-                    currentClicked.className -= " button-clicked";
-                    x.className += " button-clicked";
-                    currentClicked = x;
-
-                    document.getElementById("content").innerHTML = "<p>home stuff</P";
-                }
+                document.getElementById("content").innerHTML='<object type="text/html" data="home.html"></object>';
+            }
+            function home() {
+                document.getElementById("content").innerHTML='<object type="text/html" data="home.html"></object>';
+            }
+            function home() {
+                document.getElementById("content").innerHTML='<object type="text/html" data="home.html"></object>';
+            }
+            function home() {
+                document.getElementById("content").innerHTML='<object type="text/html" data="home.html"></object>';
+            }
+            function home() {
+                document.getElementById("content").innerHTML='<object type="text/html" data="home.html"></object>';
             }
 
-            function theme() {
-                var x = document.getElementById("theme");
-                if (x.innerHTML === "Theme: Dark") {
-                    x.innerHTML = "Theme: Light";
-                    var els = document.getElementsByTagName("*");
-                    for(var i = 0, all = els.length; i < all; i++){   
-                        els[i].classList.add('theme-light');
-                    }
-                } else { 
-                    x.innerHTML = "Theme: Dark";
-                    var els = document.getElementsByTagName("*");
-                    for(var i = 0, all = els.length; i < all; i++){   
-                        els[i].classList.remove('theme-light');
-                    }
+
+            window.onload = function () {
+                var toc = "";
+                var level = 0;
+            
+                document.getElementById("content").innerHTML =
+                    document.getElementById("content").innerHTML.replace(
+                        /<h([\d])>([^<]+)<\/h([\d])>/gi,
+                        function (str, openLevel, titleText, closeLevel) {
+                            if (openLevel != closeLevel) {
+                                return str;
+                            }
+            
+                            if (openLevel > level) {
+                                toc += (new Array(openLevel - level + 1)).join("<ul>");
+                            } else if (openLevel < level) {
+                                toc += (new Array(level - openLevel + 1)).join("</ul>");
+                            }
+            
+                            level = parseInt(openLevel);
+            
+                            var anchor = titleText.replace(/ /g, "_");
+                            toc += "<li><a href=\"#" + anchor + "\">" + titleText
+                                + "</a></li>";
+            
+                            return "<h" + openLevel + "><a name=\"" + anchor + "\">"
+                                + titleText + "</a></h" + closeLevel + ">";
+                        }
+                    );
+            
+                if (level) {
+                    toc += (new Array(level + 1)).join("</ul>");
                 }
-            }
-      </script>
-</body>
+            
+                document.getElementById("toc").innerHTML += toc;
+            };
+            
+            
+        </script>
+    </body>
 </html>

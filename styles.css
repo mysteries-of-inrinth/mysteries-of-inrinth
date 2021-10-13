@@ -1,214 +1,140 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
-
 :root {
-  --color-primary: #2e3440;
-  --color-secondary: #3b4252;
-  --color-tertiary: #4c566a;
-  --color-accent: #5e81ac;
-  --font-color: #eceff4;
-  --scrollbar-color: #eceff4;
-  --shadow-color: #222730;
-}.theme-light {
-  --color-primary: #eceff4;
-  --color-secondary: #d8dee9;
-  --color-tertiary: #d8dee9;
-  --color-accent: #81a1c1;
-  --font-color: #2e3440;
-  --scrollbar-color: #2e3440;
-  --shadow-color: #d8dee9;
+  --color-darkest: #232730;
+  --color-dark: #2e3440;
 
 }
 
-*{
-    margin: 0;
-    font-family: 'Lexend Deca', sans-serif;
-    scroll-behavior: smooth;
-    scrollbar-color: var(--scrollbar-color) var(--color-primary);
-    
+body {
+  background: var(--color-dark);
+  font-family: "Open Sans", sans-serif;
+  color: #eceff4;
 }
-html,body { height: 100%; }
-.accordion-clicked{
-  background-color: var(--color-secondary) !important;
-}
-.accordion-button{
-  display:inline-block;
-  padding:16px 24px;
-  vertical-align:middle;
-  overflow:hidden;
-  text-decoration:none;
-  color:var(--font-color);
-  cursor:pointer;
-}
-.accordion-hide{
-  display:none!important;
-}
-.accordion-show{
-  max-width: 140px;
-  min-width: 140px;
+
+
+nav {
   position: fixed;
-  margin-top: -56px;
-  margin-left: 250px;
-  display:block!important;
-}
-.accordion-bar-item{
-  background-color: var(--color-secondary);
-  width: 100%;
-  transition-duration: 0.3s;
-}
-.button-clicked{
-  background-color: var(--color-accent) !important;
-}
-.accordion-bar-item:hover{
-  background-color: var(--color-accent);
+  top: 0;
+  bottom: 0;
+  left: 0;
 }
 
-.accordion-bar-item:target{
-  background-color: var(--color-accent);
-}
-
- /* The side navigation menu */
- .sidebar {
-    margin: 0;
-    padding: 0;
-    width: 250px;
-    background-color: var(--color-primary);
-    position: fixed;
-    height: 100%;
-    overflow: hidden;
-    box-shadow: 1.5px 0px 13px 1px var(--shadow-color);
-  }
+.squircles {
+  background: var(--color-darkest);
+  list-style:none;
+  padding: .75rem;  
+  border-radius: 0 1rem 1rem 0;
   
-  /* Sidebar links */
-  .sidebar button {
-    display: block;
-    background-color: transparent;
-    width: 100%;
-    border: none;
-    text-align: left;
-    font-size: 1.2rem;
-    font-weight: 150;
-    padding: 16px 16px 16px 16px;
-    text-decoration: none;
-    color: var(--font-color);
-    transition-duration: 0.3s;
-  }
+  margin-top: 2rem;
+  display:flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+.squircle {
+  background: #bf616a;
+  margin-left: 1/8rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+  transition: .2s;
+}
+.squircle:hover{
+  border-radius: 30%;
   
-  .sidebar ul{
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+}
 
-  ul#nav li:last-child span a{
-    position: absolute;
-    bottom: 0px;
-    width: 100%
- }
+.squircle:hover::before{
+  transform: translate(-96%, -50%) scale(.6);
+  
+}
 
-
-ul#nav li span a{
-  display: block;
-  background-color: transparent;
+.squircle::before {
   width: 100%;
-  border: none;
-  text-align: left;
-  font-size: 1.2rem;
-  font-weight: 150;
-  padding: 16px;
+  height: 100%;
+  background: #eceff4;
+  content: '';
+  position:absolute;
+  border-radius: 0.25rem;
+  top: 50%;
+  transform: translate(-94%, -50%) scale(0);
+  transition: .2s;
+}
+
+.divider {
+  width: 100%;
+  background: #eceff4;
+  height: .125rem;
+  border-radius: 1/16rem;
+  opacity: .06;
+  transform: scale(.65);
+}
+
+.popper-boi {
+  background: #bf616a;
+  padding: 0.68rem 1rem;
+    position:absolute;
+  top: 50%;
+  left: 140%;
+  transform: translateY(-50%);
+  width: max-content;
+  border-radius: .25rem;
+  opacity: 0%;
+  transition: .2s;
+}
+
+.popper-text {
+  margin: 0;
+}
+
+.popper-boi::before {
+  position:absolute;
+  background: #bf616a;
+  width: 1.5rem;
+  height: 1.5rem;
+  left: -.125rem;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  content: '';
+  z-index: -1;
+  
+}
+
+.squircle:hover .popper-boi{
+  opacity: 100%;
+}
+
+#toc {
+  background-color: #232730;
+  right: 0px;
+  margin-top: 2rem;
+  top: 0;
+  max-width: 25vw;
+  border-radius: 1rem 0 0 1rem;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  font-size: large;
+  
+}
+
+#toc a {
   text-decoration: none;
-  color: var(--font-color);
-  transition-duration: 0.3s;
-  background-color: var(--color-primary);
-}
-ul#nav li span a:hover{
-  background-color: var(--color-accent);
+  color: #bf616a;
+  font-size: x-large;
 }
 
-ul#nav li span a:not(#home, #theme){
-  background-color: var(--color-tertiary);
-  padding-left: 2rem;
-}
-ul#nav li span a:not(#home, #theme):hover{
-  background-color: var(--color-accent);
 
+#content {
+  font-size: xx-large;
+  margin-left:20vw;
+  width:50vw;
 }
-  /* Active/current link */
-  .sidebar button.active{
-    background-color: var(--color-accent);
-    color: var(--color-primary);
-  }
-  
-  /* Links on mouse-over */
-  .sidebar button:hover:not(.active){
-    background-color: var(--color-secondary);
-    
-  }
 
-  .fa{
-    display: flex;
-  }
-  
-  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
-  div#content {
-    margin-left: 250px;
-    padding: 1em 1em;
-    font-size: 2rem;
-    background-color: var(--color-primary);
-    color: var(--font-color);
-    height: 100%;
-    
-    overflow: hidden;
-  }
-  div#content p{
-    line-height: 3rem;
-    max-width: 65ch;
-    margin-left: auto;
-    margin-right: auto;
-    word-break:normal;
-  }
-  
-  /* On screens that are less than 700px wide, make the sidebar into a topbar */
-  @media screen and (max-width: 700px) {
-    
-    .sidebar {
-      width: 100%;
-      height: auto;
-      position: relative;
-    }
-    div#content {
-      
-      margin-left: 0px;
-      padding: 1em 1 em;
-      font-size: 1rem;
-      background-color: var(--color-primary);
-      color: var(--font-color);
-      height: 100%;
-      
-      overflow: hidden;
-    }
-    .sidebar button {
-      font-size: 1rem;
-    }
-    ul#nav li span a{
-      font-size: 1rem;
-    }
-    div#content p{
-      line-height: 1.5rem;
-      max-width: 65ch;
-      margin-left: auto;
-      margin-right: auto;
-      word-break:normal;
-    }
-    ul#nav li:last-child span a{
-      position: relative;
-   }
-   .accordion-show{
-    max-width: none;
-    min-width: none;
-    position: static;
-    margin-top: 0px;
-    margin-left: 0px;
-    display:block!important;
-  }
-  }
+#content h3 {
+  text-align: center;
+}
+#content #sign {
+  text-align: right;
+}
