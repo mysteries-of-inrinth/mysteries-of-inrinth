@@ -21,19 +21,18 @@ nav {
 .squircles {
   background: var(--color-darkest);
   list-style:none;
-  padding: .75rem;  
-  border-radius: 0 1rem 1rem 0;
+  padding: .62vw;  
+  border-radius: 0 .8vw .8vw 0;
   
-  margin-top: 2rem;
+  margin-top: 1.65vw;
   display:flex;
   flex-direction: column;
-  gap: .5rem;
+  gap: .42vw;
 }
 .squircle {
   background: #bf616a;
-  margin-left: 1/8rem;
-  width: 3rem;
-  height: 3rem;
+  width: 2.5vw;
+  height: 2.5vw;
   border-radius: 50%;
   cursor: pointer;
   position: relative;
@@ -55,7 +54,6 @@ nav {
   background: #eceff4;
   content: '';
   position:absolute;
-  border-radius: 0.25rem;
   top: 50%;
   transform: translate(-94%, -50%) scale(0);
   transition: .2s;
@@ -64,21 +62,20 @@ nav {
 .divider {
   width: 100%;
   background: #eceff4;
-  height: .125rem;
-  border-radius: 1/16rem;
+  height: .1vw;
   opacity: .06;
   transform: scale(.65);
 }
 
 .popper-boi {
   background: #bf616a;
-  padding: 0.68rem 1rem;
-    position:absolute;
+  padding: .55vw .83vw;
+  position:absolute;
   top: 50%;
   left: 140%;
   transform: translateY(-50%);
   width: max-content;
-  border-radius: .25rem;
+  border-radius: .22vw;
   opacity: 0%;
   transition: .2s;
 }
@@ -90,9 +87,9 @@ nav {
 .popper-boi::before {
   position:absolute;
   background: #bf616a;
-  width: 1.5rem;
-  height: 1.5rem;
-  left: -.125rem;
+  width: 1.23vw;
+  height: 1.23vw;
+  left: -.1vw;
   top: 50%;
   transform: translateY(-50%) rotate(45deg);
   content: '';
@@ -107,32 +104,33 @@ nav {
 #toc {
   background-color: #232730;
   right: 0px;
-  margin-top: 2rem;
+  margin-top: 1.67vw;
   top: 0;
-  max-width: 25vw;
-  border-radius: 1rem 0 0 1rem;
+  max-width: 27vw;
+  border-radius: .8vw 0 0 .8vw;
   position: fixed;
   display: flex;
   flex-direction: column;
-  gap: .5rem;
-  font-size: large;
-  
+  gap: .5vw;
+  font-size: 1.5vw;
+  padding-right: .8vw;
 }
 
 #toc a {
   text-decoration: none;
   color: #bf616a;
-  font-size: x-large;
+  
 }
 
 
 #content {
-  font-size: xx-large;
-  margin-left:20vw;
-  width:50vw;
+  font-size: 1.66vw;
+  margin-left:15vw;
+  max-width:50vw;
 }
 
-#content h3 {
+#content h1 {
+  font-size: 3.05vw;
   text-align: center;
 }
 #content #sign {
