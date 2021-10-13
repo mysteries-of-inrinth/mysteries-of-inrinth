@@ -1,1 +1,214 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+:root {
+  --color-primary: #2e3440;
+  --color-secondary: #3b4252;
+  --color-tertiary: #4c566a;
+  --color-accent: #5e81ac;
+  --font-color: #eceff4;
+  --scrollbar-color: #eceff4;
+  --shadow-color: #222730;
+}.theme-light {
+  --color-primary: #eceff4;
+  --color-secondary: #d8dee9;
+  --color-tertiary: #d8dee9;
+  --color-accent: #81a1c1;
+  --font-color: #2e3440;
+  --scrollbar-color: #2e3440;
+  --shadow-color: #d8dee9;
+
+}
+
+*{
+    margin: 0;
+    font-family: 'Lexend Deca', sans-serif;
+    scroll-behavior: smooth;
+    scrollbar-color: var(--scrollbar-color) var(--color-primary);
+    
+}
+html,body { height: 100%; }
+.accordion-clicked{
+  background-color: var(--color-secondary) !important;
+}
+.accordion-button{
+  display:inline-block;
+  padding:16px 24px;
+  vertical-align:middle;
+  overflow:hidden;
+  text-decoration:none;
+  color:var(--font-color);
+  cursor:pointer;
+}
+.accordion-hide{
+  display:none!important;
+}
+.accordion-show{
+  max-width: 140px;
+  min-width: 140px;
+  position: fixed;
+  margin-top: -56px;
+  margin-left: 250px;
+  display:block!important;
+}
+.accordion-bar-item{
+  background-color: var(--color-secondary);
+  width: 100%;
+  transition-duration: 0.3s;
+}
+.button-clicked{
+  background-color: var(--color-accent) !important;
+}
+.accordion-bar-item:hover{
+  background-color: var(--color-accent);
+}
+
+.accordion-bar-item:target{
+  background-color: var(--color-accent);
+}
+
+ /* The side navigation menu */
+ .sidebar {
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    background-color: var(--color-primary);
+    position: fixed;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 1.5px 0px 13px 1px var(--shadow-color);
+  }
+  
+  /* Sidebar links */
+  .sidebar button {
+    display: block;
+    background-color: transparent;
+    width: 100%;
+    border: none;
+    text-align: left;
+    font-size: 1.2rem;
+    font-weight: 150;
+    padding: 16px 16px 16px 16px;
+    text-decoration: none;
+    color: var(--font-color);
+    transition-duration: 0.3s;
+  }
+  
+  .sidebar ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul#nav li:last-child span a{
+    position: absolute;
+    bottom: 0px;
+    width: 100%
+ }
+
+
+ul#nav li span a{
+  display: block;
+  background-color: transparent;
+  width: 100%;
+  border: none;
+  text-align: left;
+  font-size: 1.2rem;
+  font-weight: 150;
+  padding: 16px;
+  text-decoration: none;
+  color: var(--font-color);
+  transition-duration: 0.3s;
+  background-color: var(--color-primary);
+}
+ul#nav li span a:hover{
+  background-color: var(--color-accent);
+}
+
+ul#nav li span a:not(#home, #theme){
+  background-color: var(--color-tertiary);
+  padding-left: 2rem;
+}
+ul#nav li span a:not(#home, #theme):hover{
+  background-color: var(--color-accent);
+
+}
+  /* Active/current link */
+  .sidebar button.active{
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+  }
+  
+  /* Links on mouse-over */
+  .sidebar button:hover:not(.active){
+    background-color: var(--color-secondary);
+    
+  }
+
+  .fa{
+    display: flex;
+  }
+  
+  /* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+  div#content {
+    margin-left: 250px;
+    padding: 1em 1em;
+    font-size: 2rem;
+    background-color: var(--color-primary);
+    color: var(--font-color);
+    height: 100%;
+    
+    overflow: hidden;
+  }
+  div#content p{
+    line-height: 3rem;
+    max-width: 65ch;
+    margin-left: auto;
+    margin-right: auto;
+    word-break:normal;
+  }
+  
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+  @media screen and (max-width: 700px) {
+    
+    .sidebar {
+      width: 100%;
+      height: auto;
+      position: relative;
+    }
+    div#content {
+      
+      margin-left: 0px;
+      padding: 1em 1 em;
+      font-size: 1rem;
+      background-color: var(--color-primary);
+      color: var(--font-color);
+      height: 100%;
+      
+      overflow: hidden;
+    }
+    .sidebar button {
+      font-size: 1rem;
+    }
+    ul#nav li span a{
+      font-size: 1rem;
+    }
+    div#content p{
+      line-height: 1.5rem;
+      max-width: 65ch;
+      margin-left: auto;
+      margin-right: auto;
+      word-break:normal;
+    }
+    ul#nav li:last-child span a{
+      position: relative;
+   }
+   .accordion-show{
+    max-width: none;
+    min-width: none;
+    position: static;
+    margin-top: 0px;
+    margin-left: 0px;
+    display:block!important;
+  }
+  }
