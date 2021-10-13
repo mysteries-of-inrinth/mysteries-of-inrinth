@@ -106,14 +106,17 @@ nav {
   right: 0px;
   margin-top: 1.67vw;
   top: 0;
-  max-width: 27vw;
+  min-width: 26vw;
   border-radius: .8vw 0 0 .8vw;
   position: fixed;
   display: flex;
   flex-direction: column;
   gap: .5vw;
-  font-size: 1.4vw;
+  font-size: 1.5vw;
+}
+#toc > ul:nth-child(1) {
   padding-right: .8vw;
+  padding-left: 2.8vw;
 }
 
 #toc a {
